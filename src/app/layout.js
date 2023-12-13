@@ -8,8 +8,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        {/* connect redux toolkit in project */}
         <Provider store={store}>
           <Link href='/'></Link>
+          <Link href='/about'></Link>
           {children}
         </Provider>
       </body>
