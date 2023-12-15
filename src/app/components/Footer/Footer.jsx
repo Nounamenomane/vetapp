@@ -12,23 +12,23 @@ function Footer() {
                     <div className={styles.dropmenu}>
                         <Link href=''>Продукция</Link>
                         <div>
-                            <Link href=''>Ветеринарные препараты</Link>
-                            <Link href=''>Кормовые добавки и комбикорма</Link>
+                            <Link href='/'>Ветеринарные препараты</Link>
+                            <Link href='/'>Кормовые добавки и комбикорма</Link>
                         </div>
                     </div>
-                    <Link href=''>Дистрибьюторы</Link>
+                    <Link href='/'>Дистрибьюторы</Link>
                     <div className={styles.dropmenu}>
-                        <Link href=''>Пресс-центр</Link>
+                        <Link href='/'>Пресс-центр</Link>
                         <div>
-                            <Link href=''>События</Link>
-                            <Link href=''>Публикации</Link>
-                            <Link href=''>Новинки</Link>
-                            <Link href=''>Календарь выставок</Link>
+                            <Link href='/'>События</Link>
+                            <Link href='/'>Публикации</Link>
+                            <Link href='/'>Новинки</Link>
+                            <Link href='/'>Календарь выставок</Link>
                         </div>
                     </div>
                     <div className={styles.contant_2}>
-                        <Link href=''>Вопрос-ответ</Link>
-                        <Link href=''>Контакты</Link>
+                        <Link href='/'>Вопрос-ответ</Link>
+                        <Link href='/'>Контакты</Link>
                     </div>
                 </div>
                 <div className={styles.line}></div>
@@ -37,13 +37,13 @@ function Footer() {
                         <div className={styles.footer_date}>
                             <p>© 2023 ООО «БЕЛЭКОТЕХНИКА»</p>
                             <div>
-                                <Link href=''>Карта сайта</Link>
-                                <Link href=''>Закрытый раздел</Link>
+                                <Link href='/'>Карта сайта</Link>
+                                <Link href='/'>Закрытый раздел</Link>
                             </div>
                         </div>
                         <div className={styles.footer_contacts}>
-                            <Link href=''>+375 1713 70-300</Link>
-                            <Link href=''>e-mail: info@beleka.by</Link>
+                            <Link href='/'>+375 1713 70-300</Link>
+                            <Link href='/'>e-mail: info@beleka.by</Link>
                         </div>
                     </div>
                     <div className={styles.footer_icon}>
@@ -51,33 +51,33 @@ function Footer() {
                             <div className={styles.messenger}>
                                 <Link href='/'>
                                     <button>
-                                        <img src="/imgs/youtube.png" alt="" />
+                                        <img src="/imgs/youtube.png" alt="youtube" />
                                     </button>
                                 </Link>
                                 <Link href='/'>
                                     <button>
-                                        <img src="/imgs/facebook.png" alt="" />
+                                        <img src="/imgs/facebook.png" alt="facebook" />
                                     </button>
                                 </Link>
                                 <Link href='/'>
                                     <button>
-                                        <img src="/imgs/odno.png" alt="" />
+                                        <img src="/imgs/odno.png" alt="odnoclassniki" />
                                     </button>
                                 </Link>
                                 <Link href='/'>
-                                    <img src="/imgs/Link.png" alt="" />
+                                    <img src="/imgs/Link.png" alt="Link" />
                                 </Link>
                             </div>
                         </div>
                         <div className={styles.input_search}>
                             <input placeholder='Поиск по сайту' type="text" />
                             <div className={styles.search}>
-                                <img src="/imgs/search.png" alt="" />
+                                <img src="/imgs/search.png" alt="search" />
                             </div>
                         </div>
                     </div>
                     <div className={styles.footer_custom}>
-                        <img src="/imgs/image.png" alt="" />
+                        <img src="/imgs/image.png" alt="image" />
                         <p>Создание сайта </p>
                         <Link href='/'>Студия Борового</Link>
                     </div>
