@@ -101,16 +101,6 @@
 .menu_button {
   display: none;
 }
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* полупрозрачный черный цвет */
-  z-index: 9999; /* убедитесь, что overlay находится выше других элементов */
-}
-
 @media (max-width: 1000px) {
   .header_logo {
     gap: 20px;
@@ -142,6 +132,7 @@
     background-color: #fff;
     gap: 10px;
     transition: transform 0.3s linear;
+    z-index: 1000;
   }
   .menu_list.active {
     transform: translateX(100%);
