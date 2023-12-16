@@ -101,7 +101,6 @@
 .menu_button {
   display: none;
 }
-
 @media (max-width: 1000px) {
   .header_logo {
     gap: 20px;
@@ -133,6 +132,7 @@
     background-color: #fff;
     gap: 10px;
     transition: transform 0.3s linear;
+    z-index: 1000;
   }
   .menu_list.active {
     transform: translateX(100%);
