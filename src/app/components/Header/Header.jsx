@@ -3,7 +3,7 @@ import React, { useRef, useState } from 'react'
 import styles from './Header.module.scss'
 import Link from 'next/link'
 import { GiHamburgerMenu } from "react-icons/gi";
-import { useClickOutside } from '@/app/hooks/useClickOutside';
+import { useClickOutside } from './hooks/useClickOutside';
 
 function Header() {
     const [isOpen, setOpen] = useState(false)
