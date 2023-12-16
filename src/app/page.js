@@ -6,6 +6,6 @@ export default function Home() {
     <>
       <Header />
       <Footer />
+     <NavToCatalog />
     </>
   )
-}
