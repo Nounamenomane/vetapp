@@ -6,7 +6,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { useClickOutside } from './hooks/useClickOutside';
 
 function Header() {
-    const [isOpen, setOpen] = useState(false)
+    const [isOpenSaider, setOpenSaider] = useState(false)
 
     const [isText1, setText1] = useState(false)
     const [isText2, setText2] = useState(false)
@@ -14,7 +14,7 @@ function Header() {
     const [isText4, setText4] = useState(false)
 
     const menuRef = useRef(null)
-    useClickOutside(menuRef, () => setOpen(false))
+    useClickOutside(menuRef, () => setOpenSaider(false))
 
     return (
         <div className={styles.header}>
@@ -25,13 +25,12 @@ function Header() {
             <div className={styles.header_container} >
                 <div className={styles.header_navigation}>
                     <div className={styles.header_logo}>
-                        <img className={styles.logo} src='/imgs/logo.png' alt="" />
+                        <img className={styles.logo} src='/imgs/logo.png' alt="logo page" />
                         <Link href="/">
-                            <img className={styles.logo} src='/imgs/gmp_logo.png' alt="" />
+                            <img className={styles.logo} src='/imgs/gmp_logo.png' alt="logo gmp" />
                         </Link>
                     </div>
-                    {/* menu navigation */}
-                    <div className={`${styles.menu_list} ${isOpen ? styles.active : ''}`} ref={menuRef}>
+                    <div className={`${styles.menu_list} ${isOpenSaider ? styles.active : ''}`} ref={menuRef}>
                         <Link href="/about">
                             О компании
                         </Link>
@@ -47,7 +46,6 @@ function Header() {
                                 </Link>
                                 <button onClick={() => setText1(!isText1)} className={`${styles.triangle} ${isText1 ? styles.isText1 : ''}`}></button>
                             </div>
-                            {/* dropdown */}
                             {isText1 &&
                                 <div className={styles.dropdown} >
                                     <div className={styles.dropContent}>
@@ -129,7 +127,6 @@ function Header() {
                                 </Link>
                                 <button onClick={() => setText2(!isText2)} className={`${styles.triangle} ${isText2 ? styles.isText2 : ''}`}></button>
                             </div>
-                            {/* dropdown */}
                             {isText2 && <div className={styles.dropdown} >
                                 <div className={styles.dropContent2}>
                                     <Link href="/actions">
@@ -164,16 +161,21 @@ function Header() {
                                 Eng
                             </Link>
                         </div>
-                        <div onClick={() => setOpen(!isOpen)} className={styles.burger_menu}>
-                            <button className={styles.menu_button}>
-                                {isOpen ?
-                                    (
-                                        // <GiHamburgerMenu style={{ width: '40px', height: '40px' }} />
-                                        null
-                                    )
-                                    : (<GiHamburgerMenu style={{ width: '40px', height: '40px' }} />)}
-                            </button>
-                        </div>
+                        <button
+                            className={styles.menu_button}
+                            onClick={() => setOpenSaider((prev) => !prev)}
+                            onKeyDown={(e) => {
+                                if (e.key === 'Enter' || e.key === ' ') {
+                                    setOpenSaider((prev) => !prev);
+                                }
+                            }}
+                            tabIndex={0}
+                        >
+                            {isOpenSaider ?
+                                null
+                                : (<GiHamburgerMenu style={{ width: '40px', height: '40px' }} />)
+                            }
+                        </button>
                     </div>
                 </div>
             </div>
