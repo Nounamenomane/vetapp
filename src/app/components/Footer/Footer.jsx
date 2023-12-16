@@ -56,16 +56,16 @@ function Footer() {
                                 </Link>
                                 <Link href='/'>
                                     <button>
-                                        <img src="/imgs/facebook.png" alt="facebook" />
+                                        <img src="/imgs/facebook.svg" alt="facebook" />
                                     </button>
                                 </Link>
                                 <Link href='/'>
                                     <button>
-                                        <img src="/imgs/odno.png" alt="odnoclassniki" />
+                                        <img src="/imgs/odno.svg" alt="odnoclassniki" />
                                     </button>
                                 </Link>
                                 <Link href='/'>
-                                    <img src="/imgs/Link.png" alt="Link" />
+                                    <img src="/imgs/Link.svg" alt="Link" />
                                 </Link>
                             </div>
                         </div>
