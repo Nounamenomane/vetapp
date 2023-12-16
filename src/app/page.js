@@ -1,9 +1,8 @@
+import NavToCatalog from "./Components/NavToCatalog/NavToCatalog";	
 
-import NavToCatalog from './components/NavToCatalog/NavToCatalog';
+
 export default function Home() {
   return (
-    <>
-      <NavToCatalog />
-    </>
-  );
+    <NavToCatalog/>
+  )
 }
