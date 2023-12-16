@@ -51,33 +51,33 @@ function Footer() {
                             <div className={styles.messenger}>
                                 <Link href='/'>
                                     <button>
-                                        <img src="/imgs/youtube.png" alt="youtube" />
+                                        <img src="/imgs/youtube.png" alt="youtube mesenger" />
                                     </button>
                                 </Link>
                                 <Link href='/'>
                                     <button>
-                                        <img src="/imgs/facebook.svg" alt="facebook" />
+                                        <img src="/imgs/facebook.svg" alt="facebook mesenger" />
                                     </button>
                                 </Link>
                                 <Link href='/'>
                                     <button>
-                                        <img src="/imgs/odno.svg" alt="odnoclassniki" />
+                                        <img src="/imgs/odno.svg" alt="odnoclassniki mesenger" />
                                     </button>
                                 </Link>
                                 <Link href='/'>
-                                    <img src="/imgs/Link.svg" alt="Link" />
+                                    <img src="/imgs/Link.svg" alt="Link mesenger" />
                                 </Link>
                             </div>
                         </div>
                         <div className={styles.input_search}>
                             <input placeholder='Поиск по сайту' type="text" />
                             <div className={styles.search}>
-                                <img src="/imgs/search.png" alt="search" />
+                                <img src="/imgs/search.png" alt="search input" />
                             </div>
                         </div>
                     </div>
                     <div className={styles.footer_custom}>
-                        <img src="/imgs/image.png" alt="image" />
+                        <img src="/imgs/image.png" alt="custom studio" />
                         <p>Создание сайта </p>
                         <Link href='/'>Студия Борового</Link>
                     </div>

@@ -22,12 +22,12 @@ function Header() {
                 <Link href='/email'>info@beleka.by</Link>
                 <Link href='/number'>+375 1713 70300</Link>
             </div>
-            <div className={`${styles.header_container} ${isOpen ? styles.overlay : ''}`}>
+            <div className={styles.header_container} >
                 <div className={styles.header_navigation}>
                     <div className={styles.header_logo}>
-                        <img className={styles.logo} src='/imgs/logo.png' alt="" />
+                        <img className={styles.logo} src='/imgs/logo.png' alt="logo page" />
                         <Link href="/">
-                            <img className={styles.logo} src='/imgs/gmp_logo.png' alt="" />
+                            <img className={styles.logo} src='/imgs/gmp_logo.png' alt="logo gmp" />
                         </Link>
                     </div>
                     <div className={`${styles.menu_list} ${isOpenSaider ? styles.active : ''}`} ref={menuRef}>
