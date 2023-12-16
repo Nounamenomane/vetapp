@@ -14,7 +14,7 @@ const PromoBlock = () => {
       <div style={{ background: isLightMode ? 'none' : '#333', color: isLightMode ? '#333' : 'none', zIndex:isLightMode ? 0 : 4 }}></div>
       <div className={css.videoContent}>
         <div></div>
-        <video className={css.videoCss} preload='auto' autoplay="autoplay" loop="loop" muted="muted" poster='https://beleka.by/local/templates/html_dev/video/beleka.jpg'>
+        <video className={css.videoCss} preload='auto' autoPlay="autolay" loop="loop" muted={true} poster='https://beleka.by/local/templates/html_dev/video/beleka.jpg'>
           <source src='./videoPresintation.mp4' type='video/mp4'/>
         </video>
       </div>
