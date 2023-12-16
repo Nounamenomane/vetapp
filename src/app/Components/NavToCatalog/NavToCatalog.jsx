@@ -12,11 +12,11 @@ const NavToCatalog = () => {
       <div className={styles.inner}>
         <Link className={styles.inner_right} href="/">
           <span>Ветеринарные препараты</span>
-          <Image src="/imgs/arrow.svg" alt="arrow" width={25.69} height={59} />
+          <img src="/imgs/arrow.svg" alt="" />
         </Link>
         <Link className={styles.inner_left} href="/">
           <span>Корма и кормовые добавки</span>
-          <Image src="/imgs/arrow.svg" alt="arrow" width={25.69} height={59} />
+          <img src="/imgs/arrow.svg" alt="" />
         </Link>
       </div>
     </div>
