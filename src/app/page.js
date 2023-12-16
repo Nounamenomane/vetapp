@@ -1,8 +1,11 @@
-import NavToCatalog from './components/NavToCatalog/NavToCatalog';
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
+
 export default function Home() {
   return (
-    <div>
-      <NavToCatalog />
-    </div>
-  );
-}
+    <>
+      <Header />
+      <Footer />
+     <NavToCatalog />
+    </>
+  )
