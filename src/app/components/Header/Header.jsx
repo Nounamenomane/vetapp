@@ -161,15 +161,21 @@ function Header() {
                                 Eng
                             </Link>
                         </div>
-                        <div onClick={() => setOpenSaider((prev) => !prev)} className={styles.burger_menu}>
-                            <button className={styles.menu_button}>
-                                {isOpenSaider ?
-                                    (
-                                        null
-                                    )
-                                    : (<GiHamburgerMenu style={{ width: '40px', height: '40px' }} />)}
-                            </button>
-                        </div>
+                        <button
+                            className={styles.menu_button}
+                            onClick={() => setOpenSaider((prev) => !prev)}
+                            onKeyDown={(e) => {
+                                if (e.key === 'Enter' || e.key === ' ') {
+                                    setOpenSaider((prev) => !prev);
+                                }
+                            }}
+                            tabIndex={0}
+                        >
+                            {isOpenSaider ?
+                                null
+                                : (<GiHamburgerMenu style={{ width: '40px', height: '40px' }} />)
+                            }
+                        </button>
                     </div>
                 </div>
             </div>
