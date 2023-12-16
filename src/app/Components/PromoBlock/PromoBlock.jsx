@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import css from './PromoBlock.module.scss'
 
-const App = () => {
+const PromoBlock = () => {
   const [isLightMode, setIsLightMode] = useState(false);
 
   useEffect(() => {
@@ -37,4 +37,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default PromoBlock;
