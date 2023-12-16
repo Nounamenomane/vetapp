@@ -3,7 +3,7 @@ import React, { useRef, useState } from 'react'
 import styles from './Header.module.scss'
 import Link from 'next/link'
 import { GiHamburgerMenu } from "react-icons/gi";
-import { useClickOutside } from '@/app/hooks/useClickOutside';
+import { useClickOutside } from './hooks/useClickOutside';
 
 function Header() {
     const [isOpenSaider, setOpenSaider] = useState(false)
@@ -22,7 +22,7 @@ function Header() {
                 <Link href='/email'>info@beleka.by</Link>
                 <Link href='/number'>+375 1713 70300</Link>
             </div>
-            <div className={styles.header_container}>
+            <div className={`${styles.header_container} ${isOpen ? styles.overlay : ''}`}>
                 <div className={styles.header_navigation}>
                     <div className={styles.header_logo}>
                         <img className={styles.logo} src='/imgs/logo.png' alt="" />
