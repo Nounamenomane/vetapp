@@ -2,6 +2,7 @@ import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import NavToCatalog from "./components/NavToCatalog/NavToCatalog";
 import Subscription from "./components/Subscription/Subscription";
+import PromoBlock from "./components/PromoBlock/PromoBlock";
 
 
 export default function Home() {
@@ -11,7 +12,9 @@ export default function Home() {
       <NavToCatalog />
       <Subscription />
       <Footer />
+      <PromoBlock/>
     </>
   )
 }
 
+  
