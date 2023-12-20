@@ -9,3 +9,11 @@
 body {
     font-family: 'Inter', sans-serif;
 }
+
+.line {
+    padding-top: 20px;
+    max-width: 1200px;
+    margin: auto;
+    width: 100%;
+    border-bottom: 1px solid #7FD3D5;
+}
