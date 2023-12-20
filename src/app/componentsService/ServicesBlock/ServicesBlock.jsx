@@ -1,6 +1,6 @@
-import React from 'react'
-import styles from './ServicesBlock.module.scss'
-import Link from 'next/link'
+import React from 'react';
+import styles from './ServicesBlock.module.scss';
+import Link from 'next/link';
 
 function ServicesBlock() {
     return (
@@ -8,7 +8,7 @@ function ServicesBlock() {
             <h1>Услуги</h1>
             <div className={styles.servicesBlock_info}>
                 <div>
-                    <b>Компания "Белэкотехника" предлагает контрактное производство:</b>
+                    <b>Компания &quot;Белэкотехника&quot; предлагает контрактное производство:</b>
                     <p>1. Ветеринарных препаратов</p>
                     <p>2. Престартерных и стартерных комбикормов</p>
                     <p>3. Премиксов</p>
@@ -21,15 +21,16 @@ function ServicesBlock() {
                     <p>Имеющееся оборудование и наличие аккредитованной лаборатории позволяет производить высококачественную продукцию</p>
                     <div className={styles.phone_number}>
                         <p>Подробную информацию о данных услугах вы можете получить по телефонам:</p>
-                        <Link href='/'> +375 1713 70-315, +375 29 609-41-00</Link></div>
+                        <Link href="/"> +375 1713 70-315, +375 29 609-41-00</Link>
+                    </div>
                     <div className={styles.email}>
                         <p>E-mail:</p>
-                        <Link href='/'>olga.davidova@beleka.by</Link>
+                        <Link href="/">olga.davidova@beleka.by</Link>
                     </div>
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
-export default ServicesBlock
+export default ServicesBlock;
