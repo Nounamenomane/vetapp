@@ -21,7 +21,7 @@ function AboutCompany() {
             <p>Научно-производственная лаборатория осуществляет контроль производства и качества продукции, изготавливаемой ООО «БЕЛЭКОТЕХНИКА» в соответствии с утвержденной в установленном порядке нормативной документацией.
                 Всё это позволяет нам и нашим клиентам с уверенностью смотреть в будущее, постоянно укреплять свои лидирующие позиции на рынке.</p>
             <div className={styles.iframe}>
-                <iframe width="100%" height="420px" src="https://www.youtube.com/embed/957o7ZTyCuA?si=GN2e3QXcalAVjAtp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="100%" height="420px" src="https://www.youtube.com/embed/957o7ZTyCuA?si=GN2e3QXcalAVjAtp" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         </div>
 
