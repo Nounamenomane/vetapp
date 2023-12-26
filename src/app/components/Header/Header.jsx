@@ -33,7 +33,7 @@ function Header() {
                         </Link>
                     </div>
                     <div className={`${styles.menu_list} ${isOpenSaider ? styles.active : ''}`} ref={menuRef}>
-                        <Link href="/about">
+                        <Link href="/About">
                             О компании
                         </Link>
                         <span className={styles.line}></span>

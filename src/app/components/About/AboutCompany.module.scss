@@ -1,0 +1,54 @@
+.aboutCompany {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 40px 500px 40px 200px;
+  h1 {
+    padding-top: 40px;
+    color: #000;
+    font-family: Inter;
+    font-size: 29.297px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 33.16px; /* 113.186% */
+  }
+  p {
+    color: #000;
+
+    font-family: Inter;
+    font-size: 13.234px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  b {
+    color: #000;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+  }
+  .img {
+    img {
+      width: 400px;
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .aboutCompany {
+    padding: 20px 50px;
+  }
+}
+@media (max-width: 768px) {
+  .aboutCompany {
+    padding: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .img {
+    img {
+      width: 100% !important;
+    }
+  }
+}
