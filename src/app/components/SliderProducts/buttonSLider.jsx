@@ -5,8 +5,6 @@ const CustomPrevArrow = (props) => (
         className='prevBtn'
         onClick={props.onClick}
         onKeyDown={props.onKeyDown} // Добавлен обработчик клавиш
-        role="button"
-        tabIndex={0}
     >
         <img src="/imgs/slider/left.png" alt="" />
     </button>
@@ -17,8 +15,6 @@ const CustomNextArrow = (props) => (
         className='nextBtn'
         onClick={props.onClick}
         onKeyDown={props.onKeyDown} // Добавлен обработчик клавиш
-        role="button"
-        tabIndex={0}
     >
         <img src="/imgs/slider/right.png" alt="" />
     </button>
