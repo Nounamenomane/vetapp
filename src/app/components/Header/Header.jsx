@@ -27,7 +27,9 @@ function Header() {
             <div className={styles.header_container} >
                 <div className={styles.header_navigation}>
                     <div className={styles.header_logo}>
-                        <img className={styles.logo} src='/imgs/logo.png' alt="logo page" />
+                        <Link href='/'>
+                            <img className={styles.logo} src='/imgs/logo.png' alt="logo page" />
+                        </Link>
                         <Link href="/">
                             <img className={styles.logo} src='/imgs/gmp_logo.png' alt="logo gmp" />
                         </Link>

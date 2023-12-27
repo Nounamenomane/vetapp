@@ -17,3 +17,54 @@ body {
     width: 100%;
     border-bottom: 1px solid #7FD3D5;
 }
+
+.prevBtn,
+.nextBtn {
+    position: absolute;
+
+    &:hover {
+        color: red;
+
+    }
+}
+
+.prevBtn {
+    top: 30%;
+    left: -5%;
+}
+
+.nextBtn {
+    top: 30%;
+    right: 0%;
+}
+
+.slick-dots {
+    bottom: -75px !important;
+}
+
+.slick-dots li button:before {
+    font-size: 12px !important;
+    color: #00a8ab !important;
+}
+
+@media(max-width: 1000px) {
+
+    .nextBtn,
+    .prevBtn {
+        top: 40%;
+    }
+
+    .prevBtn {
+        left: -3%;
+    }
+
+    .nextBtn {
+        right: 2%;
+    }
+}
+
+@media(max-width: 1300px) {
+    .prevBtn {
+        left: -2%;
+    }
+}

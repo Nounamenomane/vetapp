@@ -48,6 +48,7 @@
 .footer_info {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .footer_date {
   display: flex;
