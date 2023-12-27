@@ -21,11 +21,8 @@ body {
 .prevBtn,
 .nextBtn {
     position: absolute;
-
-    &:hover {
-        color: red;
-
-    }
+    border: none;
+    background-color: transparent;
 }
 
 .prevBtn {
@@ -47,6 +44,12 @@ body {
     color: #00a8ab !important;
 }
 
+@media(max-width: 1300px) {
+    .prevBtn {
+        left: -2%;
+    }
+}
+
 @media(max-width: 1000px) {
 
     .nextBtn,
@@ -63,8 +66,8 @@ body {
     }
 }
 
-@media(max-width: 1300px) {
+@media(max-width: 576px) {
     .prevBtn {
-        left: -2%;
+        left: -5%;
     }
 }

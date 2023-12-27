@@ -1,16 +1,27 @@
 import React from "react";
-import styles from './SliderProducts.module.scss'
 
 const CustomPrevArrow = (props) => (
-    <div className='prevBtn' onClick={props.onClick}>
+    <button
+        className='prevBtn'
+        onClick={props.onClick}
+        onKeyDown={props.onKeyDown} // Добавлен обработчик клавиш
+        role="button"
+        tabIndex={0}
+    >
         <img src="/imgs/slider/left.png" alt="" />
-    </div>
+    </button>
 );
 
 const CustomNextArrow = (props) => (
-    <div className='nextBtn' onClick={props.onClick}>
+    <button
+        className='nextBtn'
+        onClick={props.onClick}
+        onKeyDown={props.onKeyDown} // Добавлен обработчик клавиш
+        role="button"
+        tabIndex={0}
+    >
         <img src="/imgs/slider/right.png" alt="" />
-    </div>
+    </button>
 );
 
 export { CustomPrevArrow, CustomNextArrow };
