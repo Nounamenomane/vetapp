@@ -1,11 +1,11 @@
 .header {
-  padding: 10px 150px;
+  padding: 0px 150px;
   a:hover {
     color: #ed1556;
   }
 }
 .contacts_header {
-  padding: 5px 180px;
+  padding: 0px 180px;
   position: fixed;
   width: 100%;
   height: 40px;
@@ -15,7 +15,9 @@
   justify-content: flex-end;
   gap: 24px;
   z-index: 10000;
-
+  div {
+    padding: 10px;
+  }
   a {
     text-decoration: none;
     color: #00a8ab;
@@ -170,7 +172,7 @@
 
   .triangle::before,
   .triangle::after {
-    content: "";
+    content: '';
     position: absolute;
     width: 0;
     height: 0;

@@ -1,0 +1,55 @@
+.servicesBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px 250px 40px 450px; /* Коррекция здесь */
+  h1 {
+    color: #000;
+    font-size: 29.414px;
+    font-weight: 700;
+    line-height: 33.16px; /* 112.735% */
+  }
+}
+.servicesBlock_info {
+  div {
+    p {
+      color: #000;
+      font-family: Inter;
+      font-size: 13.344px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+    }
+    b {
+      font-size: 13px;
+    }
+    a {
+      color: #00a8ab;
+      font-size: 13.344px;
+      font-weight: 400;
+      line-height: 20px;
+      text-decoration-line: underline;
+    }
+  }
+}
+.email,
+.phone_number {
+  display: flex;
+  gap: 5px;
+}
+@media (max-width: 768px) {
+  .servicesBlock {
+    padding: 20px 50px 20px 50px;
+  }
+  .phone_number {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 576px) {
+  .servicesBlock {
+    padding: 20px;
+  }
+  .phone_number {
+    gap: 0px;
+  }
+}

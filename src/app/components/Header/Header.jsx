@@ -19,8 +19,10 @@ function Header() {
     return (
         <div className={styles.header}>
             <div className={styles.contacts_header}>
-                <Link href='/email'>info@beleka.by</Link>
-                <Link href='/number'>+375 1713 70300</Link>
+                <div>
+                    <Link href='/email'>info@beleka.by</Link>
+                    <Link href='/number'>+375 1713 70300</Link>
+                </div>
             </div>
             <div className={styles.header_container} >
                 <div className={styles.header_navigation}>
@@ -35,7 +37,7 @@ function Header() {
                             О компании
                         </Link>
                         <span className={styles.line}></span>
-                        <Link href="/services">
+                        <Link href="/Service">
                             Услуги
                         </Link>
                         <span className={styles.line}></span>
