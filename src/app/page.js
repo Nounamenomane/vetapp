@@ -9,12 +9,11 @@ export default function Home() {
   return (
     <>
       <Header />
+      <PromoBlock />
       <NavToCatalog />
       <Subscription />
       <Footer />
-      <PromoBlock/>
     </>
   )
 }
 
-  
