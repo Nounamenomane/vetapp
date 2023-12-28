@@ -7,8 +7,8 @@ function Footer() {
         <div className={styles.footer}>
             <div className={styles.footer_container}>
                 <div className={styles.footer_menu}>
-                    <Link href='/'>O компании</Link>
-                    <Link href='/'>Услуги</Link>
+                    <Link href='/About'>O компании</Link>
+                    <Link href='/Service'>Услуги</Link>
                     <div className={styles.dropmenu}>
                         <Link href=''>Продукция</Link>
                         <div>

@@ -4,7 +4,6 @@ import './globals.css'
 import Link from 'next/link';
 import { store } from './redux';
 
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
