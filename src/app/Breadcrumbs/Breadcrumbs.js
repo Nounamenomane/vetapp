@@ -5,7 +5,7 @@ import styles from './Breadcrumbs.module.scss'
 const Breadcrumbs = ({ crumbs }) => {
     return (
         <div className={styles.crumbs}>
-            {crumbs.map((crumb, index) => (
+            {crumbs?.map((crumb, index) => (
                 <span className={styles.crumb} key={index}>
                     {index === crumbs.length - 1 ? (
                         <span className={styles.crumb}>{crumb.breadcrumb}</span>

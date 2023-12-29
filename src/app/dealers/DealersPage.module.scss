@@ -1,0 +1,103 @@
+.maps{
+    margin: 0 200px;
+    position: relative;
+}
+.Ymaps{
+    width: 100%;
+    
+}
+.mapHeader{
+    width: 100%;
+    height: 30px;
+    background-color: rgb(241, 237, 237);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    select{
+        outline: none;
+        height: 80%;
+        width: 40%;
+        option{
+            width: 20%;
+        }
+    }
+}
+.markInfo{
+    position: absolute;
+    width: 238px;
+    height: 228px;
+    top: 30%;
+    left: 75%;
+    transform: translate(-50% -50%);
+    display: flex;
+    flex-direction: column;
+    div:nth-child(1){
+        width: 100%;
+        height: 45px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        background: #00a8ab;
+        p{
+            padding: 3% 0 0 5%;
+            font-size: 12px;
+            color: #fff;
+            font-weight: bold;
+
+        }
+        button{
+            float: right;
+            font-size: 21px;
+            line-height: 1;
+            color: #000;
+            text-shadow: 0 1px 0 #fff;
+            opacity: .2;
+            filter: alpha(opacity=20);
+            outline: 0;
+            cursor: pointer;
+            background: 0 0;
+            border: 0;
+            padding: 2px 4px;
+        }
+    }
+    div:nth-child(2){
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        background: #fff;
+        width: 100%;
+        height: fit-content;
+        span,
+        b{
+            font-size: 12px;
+        }
+        b{
+            padding: 0 0 2px 0;
+        }
+    }
+}
+.numbers{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.mapsInfo{
+    height: fit-content;
+    padding: 0 200px ;
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    span{
+        font-size: 15px;
+    }
+    div{
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        width: 20%;
+    }
+    >span{
+        width: 30%;
+    }
+    
+}
