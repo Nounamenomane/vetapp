@@ -19,10 +19,8 @@ function Header() {
     return (
         <div className={styles.header}>
             <div className={styles.contacts_header}>
-                <div>
-                    <Link href='/email'>info@beleka.by</Link>
-                    <Link href='/number'>+375 1713 70300</Link>
-                </div>
+                <Link href='/email'>info@beleka.by</Link>
+                <Link href='/number'>+375 1713 70300</Link>
             </div>
             <div className={styles.header_container} >
                 <div className={styles.header_navigation}>
