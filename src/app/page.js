@@ -8,9 +8,9 @@ export default function Home() {
   return (
     <>
       <Header />
-      <Footer />
-      <NavToCatalog />
       <PromoBlock/>
+      <NavToCatalog />
+      <Footer />
     </>
   )
 }

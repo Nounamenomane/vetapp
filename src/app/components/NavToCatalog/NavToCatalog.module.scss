@@ -1,7 +1,7 @@
 .main {
-  max-width: 1200px;
+  width: 100%;
   margin: 62px auto 66px;
-  padding: 0 15px;
+  padding: 0 150px;
 
   .creation {
     display: flex;
@@ -23,6 +23,7 @@
   .inner {
     display: flex;
     justify-content: space-around;
+    gap: 30px;
 
     a:hover {
       text-decoration: underline;
@@ -37,7 +38,7 @@
     .inner_right,
     .inner_left {
       width: 100%;
-      max-width: 570px;
+      max-width: 100%;
       background-color: #ed1556;
       height: 120px;
       cursor: pointer;
@@ -79,6 +80,7 @@
 
   @media (max-width: 576px) {
     .inner {
+
       .inner_right,
       .inner_left {
         max-width: 100%;
