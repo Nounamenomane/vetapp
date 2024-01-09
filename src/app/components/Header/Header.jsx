@@ -148,7 +148,7 @@ function Header() {
 
                         </div>
                         <span className={styles.line}></span>
-                        <Link href="/faq">
+                        <Link href="/Faq">
                             Вопрос-ответ
                         </Link>
                         <span className={styles.line}></span>
