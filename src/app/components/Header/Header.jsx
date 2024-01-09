@@ -152,7 +152,7 @@ function Header() {
                             Вопрос-ответ
                         </Link>
                         <span className={styles.line}></span>
-                        <Link href="/contacts">
+                        <Link href="/Contacts">
                             Контакты
                         </Link>
                         <span className={styles.line}></span>
