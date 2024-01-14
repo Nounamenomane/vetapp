@@ -136,95 +136,129 @@
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .container {
-        padding: 0 20px;
-    }
+        padding: 0;
 
-    .main {
-        padding: 0 20px;
-    }
+        .main {
+            padding: 0 0 0 20px;
 
-    .q_a {
-        font-size: 24px;
-        padding-bottom: 20px;
-    }
+            .main_inner {
+                .form_group {
+                    flex-direction: column;
+                    padding: 0;
 
-    .ask {
-        font-size: 16px;
-        line-height: 20px;
-    }
+                    .label_text {
+                        padding: 20px 0 10px;
+                    }
 
-    .main_inner {
-        padding-top: 15px;
-        margin-bottom: 20px;
+                    input {
+                        width: 100%;
+                    }
 
-        .label_text {
-            width: 100%;
-            padding: 10px 0;
-        }
+                    .input_question>input {
+                        width: 100%;
+                    }
 
-        .input_question>input,
-        input {
-            width: 100%;
-            height: auto;
-        }
+                }
 
-        .send {
-            margin-left: 0;
+                .checkbox {
+                    width: 100%;
+                }
 
-            .btn button {
-                width: 100%;
+                .send {
+                    margin: 0;
+                    padding-top: 20px;
+                }
             }
 
-            .send_text {
-                padding: 9px 0 18px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        .main {
+            .main_inner {
+                .form_group {
+                    flex-direction: row;
+                    margin-bottom: 20px;
+                }
+
+                .send {
+                    margin-left: 205px;
+                    padding: 0;
+                    display: flex;
+                    flex-direction: column;
+                }
             }
         }
     }
 }
 
-@media only screen and (max-width: 768px) and (max-height: 1024px) {
-    .container,
-    .main {
-        padding: 0 15px;
-    }
 
-    .q_a {
-        font-size: 22px;
-        padding-bottom: 15px;
-    }
+@media (max-width: 1200px) {
+    .container {
+        padding: 0;
 
-    .ask {
-        font-size: 14px;
-        line-height: 18px;
-    }
+        .main {
+            padding: 0 0 0 20px;
 
-    .main_inner {
-        padding-top: 10px;
-        margin-bottom: 15px;
+            .main_inner {
+                .form_group {
+                    .label_text {
+                        padding: 10px 0 0 0;
+                    }
 
-        .label_text {
-            width: 100%;
-            padding: 8px 0;
+                    input {
+                        width: 330px;
+                    }
+
+                    .input_question>input {
+                        width: 330px;
+                    }
+                }
+            }
         }
+    }
+}
 
-        .input_question>input,
-        input {
-            width: 100%;
-            height: auto;
-        }
+@media (max-width: 576px) {
+    .container {
+        padding: 0;
 
-        .send {
-            margin-left: 0;
+        .main {
+            padding: 0 0 0 20px;
 
-            .btn button {
-                width: 100%;
+            .main_inner {
+                .form_group {
+                    flex-direction: column;
+                    padding: 0;
+
+                    .label_text {
+                        padding: 20px 0 10px;
+                    }
+
+                    input {
+                        width: 100%;
+                    }
+
+                    .input_question>input {
+                        width: 100%;
+                    }
+
+                }
+
+                .checkbox {
+                    width: 100%;
+                }
+
+                .send {
+                    margin: 0;
+                    padding-top: 20px;
+                }
             }
 
-            .send_text {
-                padding: 8px 0 15px;
-            }
         }
     }
 }

@@ -180,12 +180,12 @@ const Contacts = () => {
             </div>
           </div>
 
-          <div className={styles.form_group}>
+          <div className={styles.form_group_cap}>
             <label className={styles.label_text_cap}>
               Защита от автоматических сообщений <span className={styles.star}>&nbsp;*</span>
             </label>
             <div className={styles.captcha}>
-              <Image src="/imgs/captcha.png" alt="arrow" width={174} height={38}/>
+              <Image src="/imgs/captcha.png" alt="arrow" width={174} height={38} />
               <input type="text" required />
             </div>
           </div>
