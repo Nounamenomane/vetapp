@@ -16,13 +16,17 @@ function Pagination() {
 
     useEffect(() => {
         const getCard = async () => {
-            setLoading(true);
-            const res = await axios.get(
-                "https://652d5af4f9afa8ef4b2750f6.mockapi.io/header"
-            );
-            setCard(res.data);
-            setOriginalData(res.data); // Сохраните исходные данные без сортировки
-            setLoading(false);
+            try {
+                setLoading(true);
+                const res = await axios.get("https://652d5af4f9afa8ef4b2750f6.mockapi.io/header");
+                setCard(res.data);
+                setOriginalData(res.data);
+            } catch (error) {
+                console.error("Error fetching data:", error);
+                // Обработка ошибки, например, установка состояния для отображения сообщения об ошибке
+            } finally {
+                setLoading(false);
+            }
         };
         getCard();
     }, []);
@@ -68,11 +72,14 @@ function Pagination() {
             <div >
                 <div className={styles.searchInput}>
                     <h2>Поиск</h2>
-                    <input className={styles.text}
+                    <input
+                        className={styles.text}
                         type="text"
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
-                        placeholder='Название продукта' />
+                        onKeyPress={(e) => e.key === 'Enter' && handleSubmit()}
+                        placeholder='Название продукта'
+                    />
                     <input className={styles.submit} />
                 </div>
                 <div className={styles.sort}>

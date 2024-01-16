@@ -6,7 +6,7 @@ function ProductionCard({ isCard }) {
     return (
         <div className={styles.productionCard}>
             {isCard.map((card, i) => (
-                <div className={styles.sliderInfo} key={i}>
+                <div className={styles.sliderInfo} key={card.id}>
                     <Link href={`Detail/${card.id}`} passHref>
                         <div className={styles.preparats}>
                             <img src='/imgs/Klamovetin.jpg' alt='Klamovetin' />
