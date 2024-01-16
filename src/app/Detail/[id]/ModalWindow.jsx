@@ -8,18 +8,16 @@ function ModalWindow({ isOpenModal, onClose }) {
 
     useEffect(() => {
         if (isOpenModal) {
-            // Добавим фокус внутри модального окна при его открытии
             modalRef.current.focus();
         }
     }, [isOpenModal]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Добавьте обработку отправки формы по необходимости
+        // Вставьте код для обработки отправки формы
     };
 
     const handleKeyDown = (e) => {
-        // Закрываем модальное окно при нажатии клавиши Esc
         if (e.key === 'Escape') {
             onClose();
         }
@@ -33,9 +31,12 @@ function ModalWindow({ isOpenModal, onClose }) {
                     onKeyDown={handleKeyDown}
                     tabIndex={0}
                     ref={modalRef}
+                    role="dialog"
+                    aria-labelledby="modalTitle"
+                    aria-describedby="modalDescription"
                 >
                     <div className={styles.title}>
-                        <h1>Заказать товар</h1>
+                        <h1 id="modalTitle">Заказать товар</h1>
                         <img
                             onClick={onClose}
                             src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTcuNzg3IDFMNSAzLjc4NyAyLjIxMyAxIDEgMi4yMTMgMy43ODcgNSAxIDcuNzg3IDIuMjEzIDkgNSA2LjIxMyA3Ljc4NyA5IDkgNy43ODcgNi4yMTMgNSA5IDIuMjEzIiBmaWxsPSIjOTk5IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4="
@@ -53,7 +54,7 @@ function ModalWindow({ isOpenModal, onClose }) {
                         </div>
                         <div className={styles.text}>
                             <label htmlFor="phone">Телефон</label>
-                            <input type="number" id="phone" placeholder='+375-(ХХ)-ХХХ-ХХ-ХХ' />
+                            <input type="tel" id="phone" placeholder='+375-(ХХ)-ХХХ-ХХ-ХХ' />
                         </div>
                         <div className={styles.checkbox}>
                             <input type="checkbox" id="consent" />
