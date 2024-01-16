@@ -1,12 +1,21 @@
-import React from 'react'
-import styles from './ModalWindow.module.scss'
-import Link from 'next/link'
-import ReCAPTCHA from 'react-google-recaptcha'
+import React, { useRef, useEffect } from 'react';
+import styles from './ModalWindow.module.scss';
+import Link from 'next/link';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 function ModalWindow({ isOpenModal, onClose }) {
+    const modalRef = useRef(null);
+
+    useEffect(() => {
+        if (isOpenModal) {
+            // Добавим фокус внутри модального окна при его открытии
+            modalRef.current.focus();
+        }
+    }, [isOpenModal]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        // Добавьте обработку отправки формы по необходимости
     };
 
     const handleKeyDown = (e) => {
@@ -16,15 +25,22 @@ function ModalWindow({ isOpenModal, onClose }) {
         }
     };
 
-
     return (
-        <div >
-            {
-                isOpenModal &&
-                <div className={styles.modal} onKeyDown={handleKeyDown} tabIndex={0}>
+        <div>
+            {isOpenModal && (
+                <div
+                    className={styles.modal}
+                    onKeyDown={handleKeyDown}
+                    tabIndex={0}
+                    ref={modalRef}
+                >
                     <div className={styles.title}>
                         <h1>Заказать товар</h1>
-                        <img onClick={onClose} src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTcuNzg3IDFMNSAzLjc4NyAyLjIxMyAxIDEgMi4yMTMgMy43ODcgNSAxIDcuNzg3IDIuMjEzIDkgNSA2LjIxMyA3Ljc4NyA5IDkgNy43ODcgNi4yMTMgNSA5IDIuMjEzIiBmaWxsPSIjOTk5IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=" alt="" />
+                        <img
+                            onClick={onClose}
+                            src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTcuNzg3IDFMNSAzLjc4NyAyLjIxMyAxIDEgMi4yMTMgMy43ODcgNSAxIDcuNzg3IDIuMjEzIDkgNSA2LjIxMyA3Ljc4NyA5IDkgNy43ODcgNi4yMTMgNSA5IDIuMjEzIiBmaWxsPSIjOTk5IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4="
+                            alt=""
+                        />
                     </div>
                     <form onSubmit={handleSubmit} className={styles.form}>
                         <div className={styles.text}>
@@ -51,9 +67,9 @@ function ModalWindow({ isOpenModal, onClose }) {
                         </button>
                     </form>
                 </div>
-            }
+            )}
         </div>
-    )
+    );
 }
 
-export default ModalWindow
+export default ModalWindow;
