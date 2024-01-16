@@ -32,7 +32,6 @@ function ModalWindow({ isOpenModal, onClose }) {
             {isOpenModal && (
                 <div
                     className={styles.modal}
-                    onKeyDown={handleKeyDown}
                     ref={modalRef}
                     role="dialog"
                     aria-labelledby="modalTitle"
