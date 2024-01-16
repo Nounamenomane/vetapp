@@ -4,6 +4,7 @@ import styles from './Header.module.scss'
 import Link from 'next/link'
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useClickOutside } from './hooks/useClickOutside';
+import { useTranslation } from 'react-i18next';
 
 function Header() {
     const [isOpenSaider, setOpenSaider] = useState(false)
@@ -15,6 +16,23 @@ function Header() {
 
     const menuRef = useRef(null)
     useClickOutside(menuRef, () => setOpenSaider(false))
+
+    const { i18n, t } = useTranslation()
+
+    const changeLanguage = () => {
+        setTranslationText(!translationText)
+        {
+            translationText
+            ? 
+            i18n.changeLanguage('ru')
+            :
+            i18n.changeLanguage('en')
+            
+        }
+    }
+    
+    const [translationText, setTranslationText] = useState(false)
+
 
     return (
         <div className={styles.header}>
@@ -159,9 +177,7 @@ function Header() {
                     </div>
                     <div className={styles.right}>
                         <div className={styles.translate}>
-                            <Link href="/en">
-                                Eng
-                            </Link>
+                            <a onClick={changeLanguage}>{translationText ? 'Рус' : 'Eng'}</a>
                         </div>
                         <button
                             className={styles.menu_button}
