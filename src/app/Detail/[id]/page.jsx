@@ -1,12 +1,12 @@
 'use client'
-import Breadcrumbs from '@/app/Breadcrumbs/Breadcrumbs';
-import Header from '@/app/components/Header/Header'
+import Breadcrumbs from '../../Breadcrumbs/Breadcrumbs';
+import Header from '../../components/Header/Header'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 import styles from './DetailProductInfi.module.scss'
 import DetailProductInfi from './DetailProductInfi';
-import Sidebar from '@/app/ProductionComponent/Sidebar/Sidebar';
-import Footer from '@/app/components/Footer/Footer';
+import Sidebar from '../../ProductionComponent/Sidebar/Sidebar';
+import Footer from '../../components/Footer/Footer';
 
 function DetailProduct({ params }) {
 

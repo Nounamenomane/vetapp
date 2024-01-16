@@ -1,8 +1,8 @@
 'use client'
-import { useClickOutside } from '@/app/components/Header/hooks/useClickOutside'
 import styles from './DetailProductInfi.module.scss'
 import ModalWindow from './ModalWindow'
 import { useState, useRef } from 'react'
+import { useClickOutside } from './hooks/useClickOutside'
 
 function DetailProductInfi({ isProduct }) {
 
@@ -16,6 +16,15 @@ function DetailProductInfi({ isProduct }) {
         setOpenModal(false);
     };
 
+    const handleBuyButtonClick = () => {
+        setOpenModal(!isOpenModal);
+    };
+
+    const handleBuyButtonKeyPress = (event) => {
+        if (event.key === 'Enter') {
+            handleBuyButtonClick();
+        }
+    };
     return (
         <div className={styles.info}>
             <div className={styles.info_title}>
@@ -27,7 +36,12 @@ function DetailProductInfi({ isProduct }) {
                     {isOpenModal && <div className={styles.overlay} />}
                     <div className={styles.turnModal} ref={menuRef}>
                         {isOpenModal && <ModalWindow isOpenModal={isOpenModal} onClose={handleCloseModal} />}
-                        <button className={styles.btn} onClick={() => setOpenModal(!isOpenModal)}>
+                        <button
+                            className={styles.btn}
+                            onClick={handleBuyButtonClick}
+                            onKeyPress={handleBuyButtonKeyPress}
+                            tabIndex={0}
+                        >
                             Купить в Беларуси
                         </button>
                     </div>
