@@ -8,7 +8,6 @@ const mainSlice = createSlice({
     reducers: {
         onMenuClick: (state, action) => {
             state.clickedMenu = action.payload
-            console.log(action.payload);
         }
     }
 })
