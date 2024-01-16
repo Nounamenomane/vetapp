@@ -23,13 +23,16 @@ function ModalWindow({ isOpenModal, onClose }) {
         }
     };
 
+    const handleImageClick = () => {
+        onClose();
+    };
+
     return (
         <div>
             {isOpenModal && (
                 <div
                     className={styles.modal}
                     onKeyDown={handleKeyDown}
-                    tabIndex={0}
                     ref={modalRef}
                     role="dialog"
                     aria-labelledby="modalTitle"
@@ -38,9 +41,11 @@ function ModalWindow({ isOpenModal, onClose }) {
                     <div className={styles.title}>
                         <h1 id="modalTitle">Заказать товар</h1>
                         <img
-                            onClick={onClose}
+                            onClick={handleImageClick}
+                            onKeyDown={(e) => e.key === 'Enter' && handleImageClick()}
                             src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTcuNzg3IDFMNSAzLjc4NyAyLjIxMyAxIDEgMi4yMTMgMy43ODcgNSAxIDcuNzg3IDIuMjEzIDkgNSA2LjIxMyA3Ljc4NyA5IDkgNy43ODcgNi4yMTMgNSA5IDIuMjEzIiBmaWxsPSIjOTk5IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4="
                             alt=""
+                            tabIndex={0}
                         />
                     </div>
                     <form onSubmit={handleSubmit} className={styles.form}>
