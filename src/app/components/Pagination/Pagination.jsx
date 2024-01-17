@@ -54,26 +54,49 @@ function Pagination({ maxCard, cardsLength, onPageChange }) {
     return pages;
   };
 
+  const handleKeyPressPageChange = (event, newPage) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      handlePageChange(newPage);
+    }
+  };
+
+  const handleKeyPressLinkCLick = (event, pageNumber, numberLength) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      handleLinkClick(pageNumber, numberLength);
+    }
+  };
+
+
   return (
     <div className={scss.wrapper}>
       <div>
-        <div
+        <div 
+          role="button"
+          tabIndex={0}  
           onClick={() => handlePageChange(currentPage - 1)}
           style={currentPage === 1 ? { borderColor: '#9e9e9e9d', cursor: 'not-allowed' } : null}
+          onKeyDown={() => handleKeyPressPageChange(currentPage - 1)}
+          
         ></div>
         <ul>
           {generatePages().map((page, index) => (
             <li key={index}>
               {page === '...' ? (
-                <a href='/press/7'
+                <a
+                  role="button"
+                  tabIndex={0}
                   onClick={() => handleLinkClick(page, index)}
+                  onKeyDown={() => handleKeyPressPageChange(page, index)}
                   className={scss.ellipsis}
                 >
                   {page}
                 </a>
               ) : (
                 <a
+                  role="button"
+                  tabIndex={0}
                   onClick={() => handleLinkClick(page)}
+                  onKeyDown={() => handleKeyPressLinkCLick(page)}
                   className={currentPage === page ? scss.isClicked : ''}
                 >
                   {page}
@@ -83,8 +106,12 @@ function Pagination({ maxCard, cardsLength, onPageChange }) {
           ))}
         </ul>
         <div
+          role="button"
+          tabIndex={0}  
           onClick={() => handlePageChange(currentPage + 1)}
           style={currentPage === totalPages ? { borderColor: '#9e9e9e9d', cursor: 'not-allowed' } : null}
+          onKeyDown={() => handleKeyPressPageChange(currentPage + 1)}
+
         ></div>
       </div>
     </div>

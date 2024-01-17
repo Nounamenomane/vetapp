@@ -13,8 +13,20 @@ function EventsCards({image, desc, title, date, id}) {
     const handleNavigate = () => {
       router.push( `/press/${id}`,)
     }
+
+    const handleKeyPress = (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        handleNavigate();
+      }
+    };
   return (
-    <div className={scss.wrapper} onClick={handleNavigate}>
+    <div 
+      role="button"
+      tabIndex={0}
+      className={scss.wrapper} 
+      onClick={handleNavigate}
+      onKeyDown={handleKeyPress}
+    >
         <div>
             <img src={image} alt="" />
         </div>

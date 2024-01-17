@@ -1,13 +1,12 @@
 'use client'
 import { useEffect, useState } from 'react';
 import scss from '../PressCenterPage.module.scss'
-import Header from '@/app/components/Header/Header';
-import Breadcrumbs from '@/app/Breadcrumbs/Breadcrumbs';
-import Footer from '@/app/components/Footer/Footer';
-import { useParams } from 'next/navigation';
+import Header from '../../components/Header/Header';
+import Breadcrumbs from '../../Breadcrumbs/Breadcrumbs';
+import Footer from '../../components/Footer/Footer';
+import { useParams,useRouter } from 'next/navigation';
 import { useDispatch, useSelector } from 'react-redux';
-import { useRouter } from 'next/navigation';
-import { onMenuClick } from '@/app/redux/mainSlice';
+import { onMenuClick } from '../../redux/mainSlice';
 
 function PressCenterPage() {
   const params = useParams()
@@ -50,6 +49,13 @@ function PressCenterPage() {
     
   ];
 
+  const handleKeyPressMenuChange = (event, el) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      handelMenuChange(el);
+    }
+  };
+
+
   return (  
     <div>
       <Header />
@@ -62,7 +68,14 @@ function PressCenterPage() {
               ? 
               <p key={index}>{el}</p>
               :
-              <a key={index} onClick={()=> handelMenuChange(el)}>{el}</a>
+              <a 
+                role="button"
+                tabIndex={0}  
+                key={index} 
+                onClick={()=> handelMenuChange(el)}
+                onKeyDown={() => handleKeyPressMenuChange(el)}
+
+              >{el}</a>
             ))
           }
         </div>

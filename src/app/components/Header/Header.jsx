@@ -24,7 +24,7 @@ function Header() {
     const dispatch = useDispatch()
 
     const pressCenterMenuCLick = (e) => {
-        dispatch(onMenuClick(e.target.text))
+        dispatch(onMenuClick(e.target.innerText))
         router.push('/press')
     }
 
@@ -143,18 +143,18 @@ function Header() {
                             </div>
                             {isText2 && <div className={styles.dropdown} >
                                 <div className={styles.dropContent2}>
-                                    <a onClick={pressCenterMenuCLick}>
+                                    <button onClick={pressCenterMenuCLick}>
                                         События
-                                    </a>
-                                    <a onClick={pressCenterMenuCLick}>
+                                    </button>
+                                    <button onClick={pressCenterMenuCLick}>
                                         Публикации
-                                    </a>
-                                    <a onClick={pressCenterMenuCLick}>
+                                    </button>
+                                    <button onClick={pressCenterMenuCLick}>
                                         Новинки
-                                    </a>
-                                    <a onClick={pressCenterMenuCLick}>
+                                    </button>
+                                    <button onClick={pressCenterMenuCLick}>
                                         Календарь-выставок
-                                    </a>
+                                    </button>
                                 </div>
                             </div>}
 
