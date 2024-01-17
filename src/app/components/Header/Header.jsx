@@ -55,7 +55,7 @@ function Header() {
                         <span className={styles.line}></span>
                         <div className={styles.item3}>
                             <div onMouseEnter={() => setText1(!isText1)} onMouseLeave={() => setText1(isText1)} className={styles.menu_icon}>
-                                <Link href="/catalog">
+                                <Link href="/Production">
                                     Продукция
                                 </Link>
                                 <button onClick={() => setText1(!isText1)} className={`${styles.triangle} ${isText1 ? styles.isText1 : ''}`}></button>
@@ -64,7 +64,7 @@ function Header() {
                                 <div className={styles.dropdown} >
                                     <div className={styles.dropContent}>
                                         <div className={styles.menu_icon}>
-                                            <Link href="/preparats">
+                                            <Link href="/Production">
                                                 Ветеринарные препараты
                                             </Link>
                                             <button onClick={() => setText3(!isText3)} className={`${styles.triangle} ${isText3 ? styles.isText3 : ''}`}></button>
@@ -90,7 +90,7 @@ function Header() {
                                         </div>}
                                         <span className={styles.line}></span>
                                         <div className={styles.menu_icon}>
-                                            <Link href="/corm">
+                                            <Link href="/Production">
                                                 Кормовые добавки и комбикорма
                                             </Link>
                                             <button onClick={() => setText4(!isText4)} className={`${styles.triangle} ${isText4 ? styles.isText4 : ''}`}></button>
