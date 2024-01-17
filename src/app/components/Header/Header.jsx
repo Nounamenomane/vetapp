@@ -4,6 +4,9 @@ import styles from './Header.module.scss'
 import Link from 'next/link'
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useClickOutside } from './hooks/useClickOutside';
+import { useRouter } from 'next/navigation';
+import { useDispatch } from 'react-redux';
+import { onMenuClick } from '../../redux/mainSlice';
 
 function Header() {
     const [isOpenSaider, setOpenSaider] = useState(false)
@@ -15,6 +18,15 @@ function Header() {
 
     const menuRef = useRef(null)
     useClickOutside(menuRef, () => setOpenSaider(false))
+    
+    const router = useRouter()
+
+    const dispatch = useDispatch()
+
+    const pressCenterMenuCLick = (e) => {
+        dispatch(onMenuClick(e.target.innerText))
+        router.push('/press')
+    }
 
     return (
         <div className={styles.header}>
@@ -131,18 +143,18 @@ function Header() {
                             </div>
                             {isText2 && <div className={styles.dropdown} >
                                 <div className={styles.dropContent2}>
-                                    <Link href="/actions">
+                                    <button onClick={pressCenterMenuCLick}>
                                         События
-                                    </Link>
-                                    <Link href="/publick">
+                                    </button>
+                                    <button onClick={pressCenterMenuCLick}>
                                         Публикации
-                                    </Link>
-                                    <Link href="/new">
+                                    </button>
+                                    <button onClick={pressCenterMenuCLick}>
                                         Новинки
-                                    </Link>
-                                    <Link href="/calendar">
-                                        Календарь выставок
-                                    </Link>
+                                    </button>
+                                    <button onClick={pressCenterMenuCLick}>
+                                        Календарь-выставок
+                                    </button>
                                 </div>
                             </div>}
 

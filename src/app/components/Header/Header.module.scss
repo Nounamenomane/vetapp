@@ -42,7 +42,7 @@
   display: flex;
   align-items: center;
   gap: 18px;
-  a {
+  button, a{
     color: #00a8ab;
     text-decoration: none;
     font-size: 14.75px;
@@ -88,6 +88,12 @@
 .dropContent2 {
   display: flex;
   flex-direction: column;
+  button{
+    border: none;
+    background: none;
+    text-align: left;
+  }
+
 }
 
 .translate {

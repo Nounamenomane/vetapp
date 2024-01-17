@@ -65,6 +65,7 @@ function Page() {
         <Header/>
         <Breadcrumbs crumbs={breadcrumbs}/>
         <div className={scss.maps}>
+        <h1>Дистрибьюторы</h1>
           <div className={scss.mapHeader}>
             <select onChange={handleSelectChange}>
               <option value="Tajikistan, Kazakhstan, Kyrgyzstan">Казахстан, Кыргызстан, Таджикистан, Узбекистан</option>
@@ -73,7 +74,7 @@ function Page() {
             </select>
           </div>
         <YMaps>
-          <div style={{ width: '100%', aspectRatio: "2.3 / 1" }}>
+          <div className={scss.mapsWidth}>
             <Map defaultState={{ center: mapCenter, zoom: zoom }} width="100%" height="100%">
               <Placemark 
                 geometry={selectedObject.coordinates} 
