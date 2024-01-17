@@ -82,25 +82,19 @@ function Pagination({ maxCard, cardsLength, onPageChange }) {
           {generatePages().map((page, index) => (
             <li key={index}>
               {page === '...' ? (
-                <a
-                  role="button"
-                  tabIndex={0}
+                <button
                   onClick={() => handleLinkClick(page, index)}
-                  onKeyDown={() => handleKeyPressPageChange(page, index)}
                   className={scss.ellipsis}
                 >
                   {page}
-                </a>
+                </button>
               ) : (
-                <a
-                  role="button"
-                  tabIndex={0}
+                <button
                   onClick={() => handleLinkClick(page)}
-                  onKeyDown={() => handleKeyPressLinkCLick(page)}
                   className={currentPage === page ? scss.isClicked : ''}
                 >
                   {page}
-                </a>
+                </button>
               )}
             </li>
           ))}

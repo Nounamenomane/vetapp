@@ -1,8 +1,8 @@
-import EventsCards from '@/app/components/EventsCards/EventsCards'
-import Pagination from '@/app/components/Pagination/Pagination'
+import EventsCards from '../../components/EventsCards/EventsCards'
+import Pagination from '../../components/Pagination/Pagination'
 import scss from '../EventsBlockComp/EventsBlock.module.scss'
 
-function EventsBlock({PaginateCards, cards, handlePageChange}) {
+function NewItemsBlock({PaginateCards, cards, handlePageChange}) {
     return (
         <div>
             <div>
@@ -28,4 +28,4 @@ function EventsBlock({PaginateCards, cards, handlePageChange}) {
     )
 }
 
-export default EventsBlock
+export default NewItemsBlock

@@ -6,10 +6,10 @@ import scss from './PressCenterPage.module.scss'
 import Breadcrumbs from '../Breadcrumbs/Breadcrumbs';
 import EventsBlock from './EventsBlockComp/EventsBlock';
 import PublicationsBlock from './PublicationsBlockComp/PublicationsBlock';
-import NewItemsBlock from './NewItemsBlockComp/NewItemsBlock';
 import CalendarOfExhibitionsBlock from './CalendarOfExhibitionsBlockComp/CalendarOfExhibitionsBlock';
 import { useDispatch, useSelector } from 'react-redux';
 import { onMenuClick } from '../redux/mainSlice';
+import NewItemsBlock from './NewItemsBlockComp/NewItemsBlock';
 
 
 
@@ -57,13 +57,7 @@ function PressCenterPage() {
     { pathname: '/events', breadcrumb: clickedMenu }
   ] ;
 
-  
-  const handleKeyPressMenuChange = (event, el) => {
-    if (event.key === 'Enter' || event.key === ' ') {
-      handelMenuChange(el);
-    }
-  };
-  
+
   return (
     <div>
       <Header/>
@@ -76,14 +70,11 @@ function PressCenterPage() {
               ? 
               <p key={index}>{el}</p>
               :
-              <a 
-                role="button"
-                tabIndex={0} 
+              <button 
                 key={index} 
                 onClick={() => handelMenuChange(el)}
-                onKeyDown={() => handleKeyPressMenuChange(el)}
 
-              >{el}</a>
+              >{el}</button>
             ))
           }
         </div>

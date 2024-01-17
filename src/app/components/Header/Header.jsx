@@ -6,7 +6,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { useClickOutside } from './hooks/useClickOutside';
 import { useRouter } from 'next/navigation';
 import { useDispatch } from 'react-redux';
-import { onMenuClick } from '@/app/redux/mainSlice';
+import { onMenuClick } from '../../redux/mainSlice';
 
 function Header() {
     const [isOpenSaider, setOpenSaider] = useState(false)

@@ -49,11 +49,7 @@ function PressCenterPage() {
     
   ];
 
-  const handleKeyPressMenuChange = (event, el) => {
-    if (event.key === 'Enter' || event.key === ' ') {
-      handelMenuChange(el);
-    }
-  };
+  
 
 
   return (  
@@ -68,14 +64,11 @@ function PressCenterPage() {
               ? 
               <p key={index}>{el}</p>
               :
-              <a 
-                role="button"
-                tabIndex={0}  
+              <button 
                 key={index} 
                 onClick={()=> handelMenuChange(el)}
-                onKeyDown={() => handleKeyPressMenuChange(el)}
 
-              >{el}</a>
+              >{el}</button>
             ))
           }
         </div>
