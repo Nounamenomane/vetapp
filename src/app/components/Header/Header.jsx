@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation';
 import { useDispatch } from 'react-redux';
 import { onMenuClick } from '../../redux/mainSlice';
 
-function Header() {
+function Header({ onSidebarItemClick }) {
     const [isOpenSaider, setOpenSaider] = useState(false)
 
     const [isText1, setText1] = useState(false)
@@ -18,7 +18,7 @@ function Header() {
 
     const menuRef = useRef(null)
     useClickOutside(menuRef, () => setOpenSaider(false))
-    
+
     const router = useRouter()
 
     const dispatch = useDispatch()
@@ -46,7 +46,7 @@ function Header() {
                     </div>
                     <div className={`${styles.menu_list} ${isOpenSaider ? styles.active : ''}`} ref={menuRef}>
                         <Link href="/About">
-                            О компании
+                            О нас
                         </Link>
                         <span className={styles.line}></span>
                         <Link href="/Service">
@@ -64,66 +64,42 @@ function Header() {
                                 <div className={styles.dropdown} >
                                     <div className={styles.dropContent}>
                                         <div className={styles.menu_icon}>
-                                            <Link href="/Production">
+                                            <Link onClick={() => onSidebarItemClick('Ветеренарные препараты')} href='/Production'>
                                                 Ветеринарные препараты
                                             </Link>
                                             <button onClick={() => setText3(!isText3)} className={`${styles.triangle} ${isText3 ? styles.isText3 : ''}`}></button>
                                         </div>
                                         {isText3 && <div className={styles.menuContect}>
-                                            <Link href='/'>
-                                                Акушерско-гинекологические препараты
-                                            </Link>
-                                            <Link href='/'>
-                                                Антибактериальные препараты
-                                            </Link><Link href='/'>
-                                                Нестероидные противовоспалительные средства
-                                            </Link><Link href='/'>
-                                                Препараты для профилактики и лечения заболеваний вымени
-                                            </Link><Link href='/'>
-                                                Препараты для профилактики и лечения нарушений обмена веществ
-                                            </Link><Link href='/'>
-                                                Прочие препараты
-                                            </Link>
-                                            <Link href='/'>
-                                                Средства для наружного применения
-                                            </Link>
+                                            <Link onClick={() => onSidebarItemClick('Акушерско-гинекологические препараты')} href='/Production'>Акушерско-гинекологические препараты</Link>
+                                            <Link onClick={() => onSidebarItemClick('Антибактериальные препараты')} href='/Production'>Антибактериальные препараты</Link>
+                                            <Link onClick={() => onSidebarItemClick('Нестероидные противовоспалительные средства')} href='/Production'>Нестероидные противовоспалительные средства</Link>
+                                            <Link onClick={() => onSidebarItemClick('Препараты для профилактики и лечения заболеваний вымени')} href='/Production'>Препараты для профилактики и лечения заболеваний вымени</Link>
+                                            <Link onClick={() => onSidebarItemClick('Препараты для профилактики и лечения нарушений обмена веществ')} href='/Production'>Препараты для профилактики и лечения нарушений обмена веществ</Link>
+                                            <Link onClick={() => onSidebarItemClick('Противопаразитарные противопротозойные препараты')} href='/Production'>Противопаразитарные противопротозойные препараты</Link>
+                                            <Link onClick={() => onSidebarItemClick('Прочие препараты')} href='/Production'>Прочие препараты</Link>
+                                            <Link onClick={() => onSidebarItemClick('Средства для наружного применения')} href='/Production'>Средства для наружного применения</Link>
                                         </div>}
                                         <span className={styles.line}></span>
                                         <div className={styles.menu_icon}>
-                                            <Link href="/Production">
-                                                Кормовые добавки и комбикорма
+                                            <Link onClick={() => onSidebarItemClick('Кормовые добавки и комбикорма')} href='/Production'>
+                                                Кормовые добавки и
+                                                комбикорма
                                             </Link>
                                             <button onClick={() => setText4(!isText4)} className={`${styles.triangle} ${isText4 ? styles.isText4 : ''}`}></button>
                                         </div>
                                         {isText4 && <div className={styles.menuContect}>
-                                            <Link href='/'>
-                                                Белково-витаминно-минеральные добавки
-                                            </Link>
-                                            <Link href='/'>
-                                                Брикет-лизунец
-                                            </Link><Link href='/'>
-                                                Витаминно-минеральные добавки
-                                            </Link><Link href='/'>
-                                                Гепатопротектор
-                                            </Link><Link href='/'>
-                                                Заменители цельного молока
-                                            </Link><Link href='/'>
-                                                Комбикорма
-                                            </Link>
-                                            <Link href='/'>
-                                                Лизунцы мелассированные
-                                            </Link>
-                                            <Link href='/'>
-                                                Подкислитель/дезинфектант
-                                            </Link><Link href='/'>
-                                                Премиксы
-                                            </Link><Link href='/'>
-                                                Прикормки рыболовные
-                                            </Link><Link href='/'>
-                                                Раскислитель кормов (буфер)
-                                            </Link><Link href='/'>
-                                                Энергетические добавки
-                                            </Link>
+                                            <Link onClick={() => onSidebarItemClick('Белково-витаминно-минеральные добавки')} href='/Production'>Белково-витаминно-минеральные добавки</Link>
+                                            <Link onClick={() => onSidebarItemClick('Брикет-лизунец')} href='/Production'>Брикет-лизунец</Link>
+                                            <Link onClick={() => onSidebarItemClick('Витаминно-минеральные добавки')} href='/Production'>Витаминно-минеральные добавки</Link>
+                                            <Link onClick={() => onSidebarItemClick('Гепатопротектор')} href='/Production'>Гепатопротектор</Link>
+                                            <Link onClick={() => onSidebarItemClick('Заменители цельного молока')} href='/Production'>Заменители цельного молока</Link>
+                                            <Link onClick={() => onSidebarItemClick('Комбикорма')} href='/Production'>Комбикорма</Link>
+                                            <Link onClick={() => onSidebarItemClick('Лизунцы мелассированные')} href='/Production'>Лизунцы мелассированные</Link>
+                                            <Link onClick={() => onSidebarItemClick('Подкислитель/дезинфектант')} href='/Production'>Подкислитель/дезинфектант</Link>
+                                            <Link onClick={() => onSidebarItemClick('Премиксы')} href='/Production'>Премиксы</Link>
+                                            <Link onClick={() => onSidebarItemClick('Прикормки рыболовные')} href='/Production'>Прикормки рыболовные</Link>
+                                            <Link onClick={() => onSidebarItemClick('Раскислитель кормов (буфер)')} href='/Production'>Раскислитель кормов (буфер)</Link>
+                                            <Link onClick={() => onSidebarItemClick('Энергетические добавки')} href='/Production'>Энергетические добавки</Link>
                                         </div>}
                                     </div>
                                 </div>
@@ -170,11 +146,6 @@ function Header() {
                         <span className={styles.line}></span>
                     </div>
                     <div className={styles.right}>
-                        <div className={styles.translate}>
-                            <Link href="/en">
-                                Eng
-                            </Link>
-                        </div>
                         <button
                             className={styles.menu_button}
                             onClick={() => setOpenSaider((prev) => !prev)}

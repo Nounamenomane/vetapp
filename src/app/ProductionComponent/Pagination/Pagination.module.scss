@@ -56,9 +56,10 @@
 }
 .paginationBtn {
   display: flex;
+  align-items: center;
   gap: 20px;
 }
-.btn {
+.btnPaginate {
   border: none;
   background-color: transparent;
   color: #00a8ab;
@@ -68,6 +69,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 18px; /* 100% */
+  cursor: pointer;
   &:hover {
     color: red;
   }

@@ -16,6 +16,7 @@
   justify-content: space-between;
   a {
     font-size: 15.125px;
+    height: 50%;
     line-height: 25.14px; /* 166.215% */
   }
 }
@@ -89,10 +90,9 @@
     padding-left: 7px;
     border: none;
     background-color: transparent;
-    border: 1px solid #a4aeae;
-    border-radius: 50%;
-    &:hover {
-      border: 1px solid #00a8ab;
+    img {
+      width: 20px;
+      height: 20px;
     }
   }
 }
