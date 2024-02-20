@@ -6,7 +6,7 @@ const Breadcrumbs = ({ crumbs }) => {
     return (
         <div className={styles.crumbs}>
             {crumbs?.map((crumb, index) => (
-                <span className={styles.crumb} key={index}>
+                <span className={styles.container} key={index}>
                     {index === crumbs.length - 1 ? (
                         <span className={styles.crumb}>{crumb.breadcrumb}</span>
                     ) : (
@@ -14,7 +14,7 @@ const Breadcrumbs = ({ crumbs }) => {
                             <Link href={crumb.pathname} passHref>
                                 <>{crumb.breadcrumb}</>
                             </Link>
-                            <img src="/imgs/item.png" alt="separator" style={{ margin: '0 5px' }} />
+                            <img className={styles.left} src="/imgs/item.png" alt="separator" style={{ margin: '0 10px' }} />
                         </>
                     )}
                     {index < crumbs.length - 1 && ' '}

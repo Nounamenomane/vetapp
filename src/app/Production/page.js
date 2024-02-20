@@ -22,7 +22,7 @@ function Production() {
     };
     return (
         <div className={styles.production}>
-            <Header />
+            <Header onSidebarItemClick={handleSidebarItemClick} />
             <div className='line'></div>
             <Breadcrumbs crumbs={breadcrumbs} />
             <div className={styles.production_info}>
